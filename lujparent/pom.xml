@@ -23,5 +23,4 @@
     <maven.compiler.source>${luj.compiler}</maven.compiler.source>
     <maven.compiler.target>${luj.compiler}</maven.compiler.target>
   </properties>
-
 </project>
