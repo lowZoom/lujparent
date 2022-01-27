@@ -14,7 +14,7 @@
     <luj.compiler>1.8</luj.compiler>
 
     <luj.slf4j.version>1.7.25</luj.slf4j.version>
-    <luj.spring.version>5.1.12.RELEASE</luj.spring.version>
+    <luj.spring.version>5.1.20.RELEASE</luj.spring.version>
 
     <luj.junit.version>4.12</luj.junit.version>
     <luj.assertj.version>3.9.1</luj.assertj.version>
