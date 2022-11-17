@@ -6,24 +6,22 @@
 
   <groupId>luj.parent</groupId>
   <artifactId>lujparent</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>2.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
 
   <properties>
-    <luj.encoding>UTF-8</luj.encoding>
-    <luj.compiler>1.8</luj.compiler>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
 
-    <luj.slf4j.version>1.7.25</luj.slf4j.version>
-    <luj.spring.version>5.2.15.RELEASE</luj.spring.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-    <luj.junit.version>4.12</luj.junit.version>
-    <luj.assertj.version>3.9.1</luj.assertj.version>
+    <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all -->
+    <luj.groovy.version.major>4.0</luj.groovy.version.major>
+    <luj.groovy.version>${luj.groovy.version.major}.4</luj.groovy.version>
 
-    <project.build.sourceEncoding>${luj.encoding}</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>${luj.encoding}</project.reporting.outputEncoding>
-
-    <maven.compiler.source>${luj.compiler}</maven.compiler.source>
-    <maven.compiler.target>${luj.compiler}</maven.compiler.target>
+    <!-- https://mvnrepository.com/artifact/org.spockframework/spock-core -->
+    <luj.spock.version>2.3-groovy-${luj.groovy.version.major}</luj.spock.version>
   </properties>
 
   <build>
@@ -46,4 +44,16 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- https://mvnrepository.com/artifact/org.spockframework/spock-core -->
+      <dependency>
+        <groupId>org.spockframework</groupId>
+        <artifactId>spock-core</artifactId>
+        <version>2.3-groovy-${luj.groovy.version.major}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
