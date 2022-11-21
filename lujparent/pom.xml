@@ -16,6 +16,9 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+    <luj.slf4j.version>1.7.36</luj.slf4j.version>
+
     <!-- https://mvnrepository.com/artifact/org.codehaus.groovy/groovy-all -->
     <luj.groovy.version.major>4.0</luj.groovy.version.major>
     <luj.groovy.version>${luj.groovy.version.major}.4</luj.groovy.version>
@@ -27,6 +30,13 @@
   <build>
     <pluginManagement>
       <plugins>
+        <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-compiler-plugin -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.10.1</version>
+        </plugin>
+
         <!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-source-plugin -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
